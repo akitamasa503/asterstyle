@@ -1255,7 +1255,7 @@
   <section id="hero">
     <div class="hero-bg">
       <div class="hero-video-wrap">
-        <iframe src="https://player.vimeo.com/video/1190868903?background=1&autoplay=1&loop=1&muted=1&quality=auto"
+        <iframe src="https://player.vimeo.com/video/1190871970?background=1&autoplay=1&loop=1&muted=1&quality=auto"
           frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
       </div>
       <div class="hero-video-overlay"></div>
@@ -1574,4 +1574,15 @@
       menuBtn.setAttribute('aria-expanded', isOpen);
     });
 
-    // リンククリックでメニュー
+    // リンククリックでメニューを閉じる
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+
+</body>
+</html>
