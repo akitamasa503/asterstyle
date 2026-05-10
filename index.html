@@ -104,10 +104,35 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(160deg, rgba(26,23,20,0.45) 0%, rgba(26,23,20,0.75) 60%, rgba(26,23,20,0.97) 100%),
-        url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1920&q=80') center/cover no-repeat;
-      background-color: #2a1f14;
+      background-color: #1a1714;
+      overflow: hidden;
+    }
+
+    /* Vimeo背景動画 */
+    .hero-video-wrap {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-video-wrap iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 177.78vh; /* 16:9アスペクト比 */
+      height: 100%;
+      min-width: 100%;
+      min-height: 56.25vw;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hero-video-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(26,23,20,0.45) 0%, rgba(26,23,20,0.72) 60%, rgba(26,23,20,0.97) 100%);
+      z-index: 1;
     }
 
     /* 炎のような光のテクスチャ */
@@ -144,7 +169,7 @@
 
     .hero-content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       max-width: 900px;
     }
 
@@ -197,7 +222,7 @@
       flex-direction: column;
       align-items: center;
       gap: 0.75rem;
-      z-index: 1;
+      z-index: 2;
     }
 
     .hero-scroll span {
@@ -1229,6 +1254,11 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-bg">
+      <div class="hero-video-wrap">
+        <iframe src="https://player.vimeo.com/video/1190868903?background=1&autoplay=1&loop=1&muted=1&quality=auto"
+          frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+      <div class="hero-video-overlay"></div>
       <div class="hero-glow"></div>
       <div class="hero-glow-2"></div>
     </div>
@@ -1544,15 +1574,4 @@
       menuBtn.setAttribute('aria-expanded', isOpen);
     });
 
-    // リンククリックでメニューを閉じる
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuBtn.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', false);
-      });
-    });
-  </script>
-
-</body>
-</html>
+    // リンククリックでメニュー
