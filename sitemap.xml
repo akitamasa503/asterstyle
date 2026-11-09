@@ -1,39 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://asterstyle.jp/</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://asterstyle.jp/aso.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://asterstyle.jp/akagyu_aso.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://asterstyle.jp/ensou_haramura.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://asterstyle.jp/people.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+  <url><loc>https://asterstyle.jp/event-aso-akagyu-table.html</loc></url>
+  <url><loc>https://asterstyle.jp/event.html</loc></url>
+  <url><loc>https://asterstyle.jp/</loc></url>
+  <url><loc>https://asterstyle.jp/people.html</loc></url>
+  <url><loc>https://asterstyle.jp/person-kiriko.html</loc></url>
+  <url><loc>https://asterstyle.jp/person-morioka.html</loc></url>
+  <url><loc>https://asterstyle.jp/person-seno.html</loc></url>
+  <url><loc>https://asterstyle.jp/person-yoshida.html</loc></url>
+  <url><loc>https://asterstyle.jp/stories.html</loc></url>
+  <url><loc>https://asterstyle.jp/story-aso-akagyu.html</loc></url>
+  <url><loc>https://asterstyle.jp/story-ensou-haramura.html</loc></url>
 </urlset>
