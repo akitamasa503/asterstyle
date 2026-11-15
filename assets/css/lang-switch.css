@@ -1,0 +1,28 @@
+
+/* JP/EN language switch. Adds no new brand colors or decorative effects. */
+.lang-switch{display:inline-flex;align-items:center;gap:7px;flex:0 0 auto;font:600 11px/1.3 Arial,Helvetica,sans-serif;letter-spacing:.08em;white-space:nowrap}
+.lang-switch a{color:inherit;opacity:.55;text-decoration:none;border-bottom:1px solid transparent;padding:4px 0}
+.lang-switch a[aria-current="page"]{opacity:1;border-bottom-color:currentColor}
+.lang-switch .lang-sep{opacity:.4}
+.header-inner>.lang-switch{margin-left:12px;color:#f5f4f1!important}
+.site-top>.lang-switch{margin-left:12px}
+html[lang="en"] body{font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;line-height:1.78;letter-spacing:.004em}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{letter-spacing:-.01em;overflow-wrap:break-word}
+html[lang="en"] .article-body p,html[lang="en"] .text-block p{line-height:1.92;letter-spacing:.006em}
+html[lang="en"] .page-intro h1,html[lang="en"] .article-header h1{line-height:1.33}
+html[lang="en"] .maizuru-article h1{line-height:1.3}
+@media(max-width:780px){
+ .header-inner{height:auto;min-height:68px;flex-wrap:wrap;gap:5px 8px;padding:10px 17px 9px}
+ .header-inner>.brand{order:1;flex:1;min-width:0}
+ .header-inner>.lang-switch{order:2;margin:0 0 0 auto}
+ .header-inner>.nav{order:3;flex-basis:100%;justify-content:space-between;gap:12px;width:100%}
+ .header-inner>.nav a{font-size:10.5px;white-space:nowrap;padding:6px 0 1px}
+ .site-top{height:auto!important;min-height:70px;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:4px 8px;padding:8px 15px!important}
+ .site-top>.brand{grid-column:1;grid-row:1;align-self:center}
+ .site-top>.lang-switch{grid-column:2;grid-row:1;margin:0;align-self:center}
+ .site-top>.story-nav{grid-column:1 / -1;grid-row:2;display:flex;justify-content:space-between;gap:8px;width:100%}
+ .site-top>.story-nav a{font-size:10px}
+ html[lang="en"] .article-header h1{font-size:clamp(28px,8vw,35px)}
+ html[lang="en"] .hero h1{font-size:clamp(25px,7vw,34px)}
+}
+@media(max-width:359px){.header-inner>.nav{gap:7px}.header-inner>.nav a,.site-top>.story-nav a{font-size:9px}.lang-switch{font-size:10px}}
