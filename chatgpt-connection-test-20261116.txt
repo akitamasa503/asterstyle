@@ -1,0 +1,4 @@
+ASTER STYLE GitHub connection test
+Date: 2026-11-16
+Purpose: Verify that ChatGPT can safely create a file on a test branch.
+This file is not part of the website and is not on the main branch.
