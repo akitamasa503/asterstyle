@@ -320,3 +320,6 @@ body{background:#fff}
 .story-author-credit{display:block;margin:4px 0 27px;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.12em;color:#5e625d;line-height:1.9}
 .story-author-credit .author-divider{margin:0 .22em;color:#b0b3ad}
 @media(max-width:720px){.story-author-credit{font-size:12px;letter-spacing:.08em;margin:4px 0 21px}}
+
+/* Editorial footer: publisher is a label, not a link back to the same homepage. */
+.footer-nav .footer-operator{font-size:12px;color:#c8d4cb;opacity:.8;cursor:default}
