@@ -413,3 +413,40 @@ body{background:#fff}
  .editorial-event-more{padding-bottom:30px}
 }
 @media(max-width:360px){.editorial-story-grid{grid-template-columns:1fr}.editorial-home .editorial-people .cards{grid-template-columns:1fr}.editorial-section-head .text-link{white-space:normal}}
+
+
+/* 2026-11-26 — Native swipe rails on the homepage only. Desktop grid stays unchanged. */
+.editorial-home .editorial-people .mobile-rail-extra{display:none}
+@media(max-width:720px){
+ .editorial-home .editorial-stories>.container,
+ .editorial-home .editorial-people>.container{min-width:0}
+ .editorial-home .editorial-story-grid,
+ .editorial-home .editorial-people .cards{
+  display:flex;flex-wrap:nowrap;align-items:flex-start;gap:15px;
+  overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;
+  scroll-snap-type:x proximity;scroll-padding-inline:2px;
+  padding:2px 2px 12px;margin:0 -2px;
+  scrollbar-width:thin;scrollbar-color:#c7c4be transparent;
+  -webkit-overflow-scrolling:touch;
+ }
+ .editorial-home .editorial-story-grid::-webkit-scrollbar,
+ .editorial-home .editorial-people .cards::-webkit-scrollbar{height:3px}
+ .editorial-home .editorial-story-grid::-webkit-scrollbar-thumb,
+ .editorial-home .editorial-people .cards::-webkit-scrollbar-thumb{background:#c7c4be;border-radius:3px}
+ .editorial-home .editorial-story-grid>.editorial-story-card{
+  display:block;flex:0 0 77%;min-width:0;max-width:360px;
+  scroll-snap-align:start;padding:0;border:0;
+ }
+ .editorial-home .editorial-story-grid .editorial-story-image{aspect-ratio:4/3}
+ .editorial-home .editorial-story-grid .editorial-story-copy h3{font-size:clamp(17px,4.8vw,21px);line-height:1.55;margin-top:5px}
+ .editorial-home .editorial-story-grid .editorial-story-copy p{display:none}
+ .editorial-home .editorial-people .cards>.person-card{
+  display:block;flex:0 0 44%;max-width:205px;min-width:0;
+  scroll-snap-align:start;
+ }
+ .editorial-home .editorial-people .person-card .card-image{aspect-ratio:4/5}
+ .editorial-home .editorial-people .person-card .card-copy{padding:9px 0 3px}
+ .editorial-home .editorial-people .person-card h3{font-size:clamp(17px,4.8vw,21px);overflow-wrap:anywhere}
+ .editorial-home .editorial-people .person-card .card-meta{font-size:10px;letter-spacing:0;line-height:1.5}
+ .editorial-home .editorial-people .person-card .role{font-size:11px;line-height:1.65;overflow-wrap:anywhere}
+}
