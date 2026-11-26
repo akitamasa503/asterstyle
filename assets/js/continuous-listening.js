@@ -17,7 +17,7 @@ const style=document.createElement("style");style.id="shizen-listen-css";style.t
 function contentNodes(){return [...document.body.childNodes].filter(n=>n!==bar&&!(n.nodeType===1&&n.tagName==="SCRIPT"));}
 function sheets(){return [...document.head.querySelectorAll('link[rel="stylesheet"],style:not(#shizen-listen-css)')];}
 function key(u){return new URL(u,location.href).pathname.replace(/\/index\.html$/,"/").replace(/\.html$/,"").replace(/\/$/,"")||"/";}
-function allowed(u){return u.origin===location.origin&&!u.search&&/^\/(?:en\/)?(?:index(?:\.html)?|about(?:\.html)?|people(?:\.html)?|stories(?:\.html)?|films(?:\.html)?|event(?:-[a-z0-9-]+)?(?:\.html)?|person-[a-z0-9-]+(?:\.html)?|story-[a-z0-9-]+(?:\.html)?)?\/?$/.test(u.pathname);}
+function allowed(u){return u.origin===location.origin&&!u.search&&/^\/(?:en\/)?(?:index(?:\.html)?|about(?:\.html)?|people(?:\.html)?|stories(?:\.html)?|films(?:\.html)?|film-[a-z0-9-]+(?:\.html)?|event(?:-[a-z0-9-]+)?(?:\.html)?|person-[a-z0-9-]+(?:\.html)?|story-[a-z0-9-]+(?:\.html)?)?\/?$/.test(u.pathname);}
 function refresh(){if(!bar||!active)return;bar.querySelector(".sl-state").textContent=active.playing?"LISTENING":"PAUSED";const b=bar.querySelector(".sl-toggle");b.textContent=active.playing?"Ⅱ":"▶";b.setAttribute("aria-label",active.playing?tr("一時停止","Pause"):tr("再生","Play"));bar.querySelector(".sl-back").textContent=tr("映像へ戻る","Back to film");bar.querySelector(".sl-close").textContent=tr("× 終了","× Close");}
 function cleanMarks(){if(retained){for(const n of [retained,...retained.querySelectorAll("["+A+"]")]){n.removeAttribute(A);n.removeAttribute(R);}for(const [n,id] of retainedIds)n.id=id;}retainedIds=[];}
 function hideBar(){if(bar){bar.remove();bar=null;document.body.style.paddingBottom=priorPadding;}}
