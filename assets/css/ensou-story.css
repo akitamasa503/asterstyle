@@ -116,3 +116,22 @@
 @media(max-width:300px){
   html[lang="ja"] .ensou-content .ensou-quote p {white-space:normal;text-wrap:balance;}
 }
+
+/* ENSOU opening: deliberate title lines and a quieter mobile masthead. */
+.ensou-hero .ensou-title-part {display:inline-block;}
+.ensou-hero .ensou-kicker-primary,
+.ensou-hero .ensou-kicker-place {display:inline-block;}
+@media(max-width:650px){
+  .ensou-hero {padding:32px 0 25px;}
+  .ensou-hero .ensou-title-wrap {padding:0 23px;}
+  .ensou-hero .ensou-kicker {font-size:10px;line-height:1.7;letter-spacing:.13em;margin-bottom:20px;}
+  .ensou-hero .ensou-kicker-primary,
+  .ensou-hero .ensou-kicker-place {display:block;}
+  .ensou-hero .ensou-kicker-divider {display:none;}
+  .ensou-hero .ensou-kicker-place {margin-top:3px;font-size:9px;letter-spacing:.12em;}
+  html[lang="ja"] .ensou-hero h1 {font-size:clamp(32px,9.3vw,46px);line-height:1.38;letter-spacing:.025em;margin-bottom:20px;}
+  html[lang="ja"] .ensou-hero .ensou-title-part {display:block;}
+  html[lang="en"] .ensou-hero h1 {font-size:clamp(32px,8vw,45px);line-height:1.22;letter-spacing:0;margin-bottom:20px;text-wrap:balance;}
+  .ensou-hero .ensou-subtitle {font-size:14px;line-height:1.9;letter-spacing:.015em;margin-bottom:22px;text-wrap:pretty;}
+  .ensou-hero .ensou-meta {padding-top:12px;gap:8px 14px;letter-spacing:.08em;}
+}
