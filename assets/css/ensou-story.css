@@ -54,3 +54,65 @@
 .ensou-content .ensou-person-photo figcaption{max-width:260px;margin:0 0 6px;align-self:end;padding-top:16px;border-top:1px solid #c8cec4;line-height:2.1;color:#78817a;font-size:12px}
 .ensou-content .ensou-person-photo:nth-of-type(1) img{object-position:center 42%}
 @media(max-width:650px){.ensou-content .ensou-person-photo{margin:28px 0 38px;grid-template-columns:minmax(0,1fr);gap:10px}.ensou-content .ensou-person-photo img{height:auto;max-height:600px;object-fit:contain;background:#f7f8f5}.ensou-content .ensou-person-photo figcaption{max-width:none;margin:0;padding:7px 0 0;font-size:10px;border-top:0}}
+
+/* Editorial refinement: keep the photographs and the original story intact. */
+.ensou-content blockquote.ensou-quote {
+  margin:52px auto 56px;
+  padding:28px 0 26px;
+  max-width:100%;
+  border-top:1px solid #d9ded6;
+  border-bottom:1px solid #d9ded6;
+}
+.ensou-content .ensou-quote p {
+  font-size:clamp(24px,3vw,30px);
+  line-height:1.65;
+  letter-spacing:.035em;
+  font-weight:500;
+  color:#344e3e;
+  margin:0;
+  text-wrap:balance;
+}
+.ensou-content .ensou-quote cite {
+  margin-top:12px;
+  font-size:11px;
+  line-height:1.65;
+  letter-spacing:.035em;
+  color:#69766b;
+}
+.ensou-content h2 {text-wrap:balance;}
+.ensou-content h2 .ensou-chapter {letter-spacing:.16em;}
+.ensou-content p.ensou-context-links {
+  font-family:var(--sans);
+  font-size:12px;
+  line-height:1.8;
+  margin:-8px 0 24px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px 18px;
+}
+.ensou-content .ensou-context-links .text-link {
+  font-size:inherit;
+  color:#52695a;
+  letter-spacing:.02em;
+}
+@media(max-width:650px){
+  .ensou-content {padding-top:42px;padding-bottom:64px;}
+  .ensou-content p {font-size:15px;line-height:2.05;letter-spacing:.015em;margin-bottom:21px;}
+  .ensou-content p.ensou-lead {font-size:17px;line-height:2.05;margin-bottom:25px;}
+  .ensou-content h2 {margin:52px 0 20px;font-size:clamp(21px,5.5vw,25px);line-height:1.55;letter-spacing:.025em;}
+  .ensou-content h2 .ensou-chapter {font-size:10px;margin-bottom:10px;}
+  .ensou-content blockquote.ensou-quote {margin:36px 0 38px;padding:23px 0 22px;}
+  .ensou-content .ensou-quote p {font-size:clamp(16px,4.65vw,22px);line-height:1.65;letter-spacing:0;}
+  html[lang="ja"] .ensou-content .ensou-quote p {font-size:clamp(14px,4.6vw,22px);white-space:nowrap;}
+  .ensou-content .ensou-quote cite {font-size:10px;line-height:1.65;margin-top:10px;letter-spacing:.01em;}
+  .ensou-content p.ensou-context-links {font-size:11px;line-height:1.7;margin:0 0 20px;gap:6px 12px;}
+  .ensou-content .ensou-figure {margin-top:30px;margin-bottom:36px;}
+  .ensou-content .ensou-person-photo {margin-top:25px;margin-bottom:31px;}
+  .ensou-content .ensou-photo-pair {margin-top:30px;margin-bottom:36px;}
+  .ensou-end .ensou-word {font-size:clamp(24px,7vw,36px);letter-spacing:.12em;line-height:1.4;}
+  .ensou-end {margin:52px auto 35px;}
+  .ensou-credit {margin-top:44px;}
+}
+@media(max-width:300px){
+  html[lang="ja"] .ensou-content .ensou-quote p {white-space:normal;text-wrap:balance;}
+}
