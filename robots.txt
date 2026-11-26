@@ -1,3 +1,11 @@
 User-agent: *
 Allow: /
+
+# Search crawlers; training-crawler policy remains unchanged.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://asterstyle.jp/sitemap.xml
